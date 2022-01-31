@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8" />
+    <link rel ="stylesheet" href="./assets/css/style.css" />
+    <meta name="description" content="Timed Coding Quick" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Quiz Challenge</title>
+</head>
+
+<body> 
+    <header>
+        <div class="scores">
+            <a id="high-scores-link">View high scores</a>
+        </div>
+        <div id="timer" class="timer">Time: 75</div>
+    </header>
+
+    <section class="start-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            Try to answer the following code-related questions within the time limit. </br>
+            Keep in mind that incorrect answers will penalize your score/time by 10 seconds!
+        </p>
+        <div class="buttons">
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+        </div>
+    </section>
+
+    <section class="questions-page">
+        <h1>Question</h1>
+        <div id="answer-btn">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <div class="buttons">
+            <button id="next-btn">Next</button>
+        </div>
+    </section>
+
+    <section class="scores-page">
+        <form id="submit-form">
+            <label id="initials-label">Enter your initials to save your score:</label>
+            <input type="text" id="initials-field" placeholder="Enter your initials" />
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <section class="highscores-page">
+        <div>
+            <h1>High Scores</h1>
+        </div>
+        <div class="buttons">
+            <button id="back-btn">Go Back</button>
+            <button id="clear-btn">Clear High Scores</button>
+        </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
