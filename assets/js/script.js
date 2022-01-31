@@ -1,48 +1,48 @@
 //The Questions
 var questions = [
     { 
-        question: "How do you write 'Hello World' in an alert box?", 
+        question: "Commonly used data types do NOT include:", 
         answers: [
-            { text: "msg('Hello World')", correct: false },
-            { text: "alert('Hello World')" , correct: true },
-            { text: "prompt('Hello World')", correct: false },
-            { text: "alertBox('Hello World')", correct: false }
+            { text: "strings", correct: false },
+            { text: "booleans" , correct: false },
+            { text: "alerts", correct: true },
+            { text: "numbers", correct: false }
         ]
     },
     { 
-        question: "Which of the following function of Array object calls a function for each element in the array?", 
+        question: "The condition in an if / else statement is enclosed with _______.", 
         answers: [
-            { text: "concat()", correct: false },
-            { text: "filter()", correct: false },
-            { text: "forEach()", correct: true },
-            { text: "split()", correct: false }
+            { text: "quotes", correct: false },
+            { text: "curly brackets", correct: false },
+            { text: "parenthesis", correct: true },
+            { text: "square brackets", correct: false }
         ]
     },
     { 
-        question: "How to write an IF statement for executing some code if 'i' is NOT equal to 8?", 
+        question: "Arrays in JavaScript can be used to store ______. ", 
         answers: [
-            { text: "if (i != 8)", correct: true },
-            { text: "if i =! 8", correct: false },
-            { text: "if (i <> 8)", correct: false },
-            { text: "if (i !=== 8)", correct: false }
+            { text: "numbers and strings", correct: false },
+            { text: "other arrays", correct: false },
+            { text: "booleans", correct: false },
+            { text: "all of the above", correct: true }
         ]
     },
     { 
-        question: "What is the correct way to write a JavaScript array?", 
+        question: "String values must be enclosed within _______ when being assigned to variables.", 
         answers: [
-            { text: "var vegetable = (0:'kale', 1:'lettuce', 2:'spinach')", correct: false },
-            { text: "var vegetable = ['kale', 'lettuce', 'spinach']", correct: true },
-            { text: "var vegetable = (kale, lettuce, spinach)", correct: false },
-            { text: "None of the above", correct: false }
+            { text: "commas", correct: false },
+            { text: "curly brackets", correct: false },
+            { text: "quotes", correct: true },
+            { text: "parenthesis", correct: false }
         ]
     },
     { 
-        question: "How do you round the number 102.456, to the nearest integer?",
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         answers: [
-            { text: "Math.random(102.456)", correct: false },
-            { text: "Math.rnd(102.456)", correct: false },
-            { text: "round(102.456)", correct: false },
-            { text: "None of the above", correct: true }
+            { text: "JavaScript", correct: false },
+            { text: "terminal/bash", correct: false },
+            { text: "for loops", correct: false },
+            { text: "console log", correct: true }
         ]
     },
 ];
@@ -60,10 +60,10 @@ var checkAnswerEl = document.getElementById("check-answer");
 var viewHighScores = document.getElementById("highscores-link");
 var submitButton = document.getElementById("submit-btn");
 var clearButton = document.getElementById("clear-btn");
-var initialsField = document.getElementById("initials-field");
+var initialsField = document.getElementById("player-name");
 var backButton = document.getElementById("back-btn");
 var scoreField = document.getElementById("player-score");
-var scores = JSON.parse(localStorage.getItem("scores"));
+var scores = JSON.parse(localStorage.getItem("scores")) || [];
 var shuffledQuestions;
 var currentQuestionIndex;
 
@@ -225,7 +225,7 @@ function showHighScores(initials) {
 
     var highScoreEl = document.getElementById("highscore");
     highScoreEl.innerHTML = "";
-
+    //console.log(scores)
     for (i = 0; i < scores.length; i++) {
         var div1 = document.createElement("div");
         div1.setAttribute("class", "name-div");
@@ -255,13 +255,13 @@ submitButton.addEventListener("click", function (event) {
 
 
 // Restart or reload the page
-restartButton.addEventListener("click", function () {
+backButton.addEventListener("click", function () {
     window.location.reload();
 });
 
 
 // Clear localStorage items 
-clearScoreButton.addEventListener("click", function () {
+clearButton.addEventListener("click", function () {
     localStorage.clear();
     document.getElementById("highscore").innerHTML = "";
 });
