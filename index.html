@@ -12,12 +12,12 @@
 <body> 
     <header>
         <div class="scores">
-            <a id="high-scores-link">View high scores</a>
+            <a id="highscores-link">View high scores</a>
         </div>
         <div id="timer" class="timer">Time: 75</div>
     </header>
 
-    <section class="centered">
+    <section id="start-page" class="start-quiz">
         <h1>Coding Quiz Challenge</h1>
         <p>
             Try to answer the following code-related questions within the time limit. </br>
@@ -28,31 +28,33 @@
         </div>
     </section>
 
-    <section id="questions-page" class="hide">
-        <h1>Question</h1>
+    <section id="question-page" class="hide">
+        <h1 id="question">Question</h1>
         <div id="answer-btn" class="btn-grid">
             <button class="btn">Answer 1</button>
             <button class="btn">Answer 2</button>
             <button class="btn">Answer 3</button>
             <button class="btn">Answer 4</button>
         </div>
+        <h2 id="check-answer" class="correct-wrong hide"></h2>
         <div class="buttons">
-            <button id="next-btn">Next</button>
+            <button id="next-btn" class="next-btn hide">Next</button>
         </div>
     </section>
 
     <section id="scores-page" class="hide">
         <form id="submit-form">
+            <h3 id="your-score"></h3>
             <label id="initials-label">Enter your initials to save your score:</label>
             <input type="text" id="initials-field" placeholder="Enter your initials" />
             <button id="submit-btn">Submit</button>
         </form>
     </section>
 
-    <section id="highscores-page" class="hide">
-        <div>
+    <section id="highscores" class="highscores-page hide">
+        <div id="high-scores">
             <h1 class="centered">High Scores</h1>
-        </div>
+            <div id="highscore" class="highscore highscore-list"></div>        </div>
         <div class="buttons">
             <button id="back-btn">Go Back</button>
             <button id="clear-btn">Clear High Scores</button>
