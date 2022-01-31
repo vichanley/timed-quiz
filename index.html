@@ -17,7 +17,7 @@
         <div id="timer" class="timer">Time: 75</div>
     </header>
 
-    <section class="start-page">
+    <section class="centered">
         <h1>Coding Quiz Challenge</h1>
         <p>
             Try to answer the following code-related questions within the time limit. </br>
@@ -28,9 +28,9 @@
         </div>
     </section>
 
-    <section class="questions-page">
+    <section id="questions-page" class="hide">
         <h1>Question</h1>
-        <div id="answer-btn">
+        <div id="answer-btn" class="btn-grid">
             <button class="btn">Answer 1</button>
             <button class="btn">Answer 2</button>
             <button class="btn">Answer 3</button>
@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <section class="scores-page">
+    <section id="scores-page" class="hide">
         <form id="submit-form">
             <label id="initials-label">Enter your initials to save your score:</label>
             <input type="text" id="initials-field" placeholder="Enter your initials" />
@@ -49,9 +49,9 @@
         </form>
     </section>
 
-    <section class="highscores-page">
+    <section id="highscores-page" class="hide">
         <div>
-            <h1>High Scores</h1>
+            <h1 class="centered">High Scores</h1>
         </div>
         <div class="buttons">
             <button id="back-btn">Go Back</button>
